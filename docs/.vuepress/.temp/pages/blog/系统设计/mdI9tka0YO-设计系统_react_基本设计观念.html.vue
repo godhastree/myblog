@@ -1,0 +1,36 @@
+<template><div><h1 id="设计系统-react-基本设计观念" tabindex="-1"><a class="header-anchor" href="#设计系统-react-基本设计观念" aria-hidden="true">#</a> 设计系统_react_基本设计观念</h1>
+<h2 id="动作组件-active" tabindex="-1"><a class="header-anchor" href="#动作组件-active" aria-hidden="true">#</a> 动作组件(Active)</h2>
+<div class="language-typescript line-numbers-mode" data-ext="ts"><pre v-pre class="language-typescript"><code><span class="token keyword">interface</span> <span class="token class-name"><span class="token constant">X</span></span> <span class="token punctuation">{</span> 
+  search_str<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  <span class="token function-variable function">get_search_str</span><span class="token operator">:</span> <span class="token punctuation">(</span>value<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">void</span> 
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">XX</span><span class="token operator">=</span> <span class="token punctuation">(</span>props<span class="token operator">:</span><span class="token constant">X</span> <span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token comment">// 定义查询变量</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>inputValue<span class="token punctuation">,</span> setInputValue<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 确认查询变量为</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">search</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>props<span class="token punctuation">.</span><span class="token function">get_search</span><span class="token punctuation">(</span>inputValue<span class="token punctuation">)</span><span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span><span class="token operator">></span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//用法</span>
+<span class="token keyword">const</span> <span class="token function-variable function">nn</span> <span class="token operator">=</span> <span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>SearchCard search_str<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">}</span> get_search_str<span class="token operator">=</span><span class="token punctuation">{</span>nn<span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">></span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="数据api组件-activeapi" tabindex="-1"><a class="header-anchor" href="#数据api组件-activeapi" aria-hidden="true">#</a> 数据api组件(ActiveApi)</h2>
+<div class="language-typescript line-numbers-mode" data-ext="ts"><pre v-pre class="language-typescript"><code><span class="token comment">// 在封装组件</span>
+
+<span class="token keyword">interface</span> <span class="token class-name"><span class="token constant">X</span></span> <span class="token punctuation">{</span> 
+  get_url<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  <span class="token function-variable function">get_data</span><span class="token operator">:</span> <span class="token punctuation">(</span>value<span class="token operator">:</span> object<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">void</span> 
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">XXApi</span><span class="token operator">=</span> <span class="token punctuation">(</span>props<span class="token operator">:</span><span class="token constant">X</span> <span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token comment">// 定义查询变量</span>
+    <span class="token keyword">const</span> <span class="token punctuation">[</span>inputValue<span class="token punctuation">,</span> setInputValue<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 确认查询变量为</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">search</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>props<span class="token punctuation">.</span><span class="token function">get_search</span><span class="token punctuation">(</span>inputValue<span class="token punctuation">)</span><span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>Active<span class="token operator">/</span><span class="token operator">></span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div></template>
+
+
