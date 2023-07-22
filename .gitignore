@@ -1,4 +1,7 @@
-'node_modules' 
+'' 
 '.temp' 
 '.cache' 
 '新建文件夹'
+'.github_path.txt'
+/docs/.vuepress/dist/*
+/node_modules/*
