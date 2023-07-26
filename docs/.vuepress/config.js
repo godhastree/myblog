@@ -6,6 +6,7 @@ import bloglist from './bloglist'
 import autoIncludePlugin from './autoIncludePlugin'
 
 export default defineUserConfig({
+    base:'/myblog/',
     lang: 'zh-CN',
     title: '圆核',
     description: '这是我的第一个 VuePress 站点',
