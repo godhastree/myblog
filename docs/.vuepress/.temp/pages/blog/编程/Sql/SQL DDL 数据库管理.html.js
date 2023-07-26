@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-71a95ee5\",\"path\":\"/blog/%E7%BC%96%E7%A8%8B/Sql/SQL%20DDL%20%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86.html\",\"title\":\"SQL DDL 数据库管理\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"headers\":[],\"git\":{},\"filePathRelative\":\"blog/编程/Sql/SQL DDL 数据库管理.md\"}")
